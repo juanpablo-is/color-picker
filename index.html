@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <title>Color Picker</title>
+</head>
+
+<body>
+    <div id="alert">
+        <div>Color <span id="alert-color">#EEF213</span> copied to your clipboard!</div>
+    </div>
+    <div class="contenedor">
+        <h1>Color palette generator</h1>
+        <div class="colors">
+            <button class="card-color" id="card1">
+                <div class="color"></div>
+                <h2>#EEF213</h2>
+            </button>
+            <button class="card-color" id="card2">
+                <div class="color"></div>
+                <h2>#EEF213</h2>
+            </button>
+            <button class="card-color" id="card3">
+                <div class="color"></div>
+                <h2>#EEF213</h2>
+            </button>
+            <button class="card-color" id="card4">
+                <div class="color"></div>
+                <h2>#EEF213</h2>
+            </button>
+            <button class="card-color" id="card5">
+                <div class="color"></div>
+                <h2>#EEF213</h2>
+            </button>
+        </div>
+        <button class="btn" onclick="execPicker()">Generate palette</button>
+        <small>Or just press the "Spacebar" to generate new palettes</small>
+    </div>
+</body>
+
+<script src="index.js"></script>
+
+</html>
