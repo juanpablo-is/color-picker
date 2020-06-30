@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+    <link rel="icon" href="favicon.png">
     <title>Color Picker</title>
 </head>
 
@@ -38,8 +39,29 @@
                 <h2>#EEF213</h2>
             </button>
         </div>
-        <button class="btn" onclick="execPicker()">Generate palette</button>
+        <div id="options">
+            <button class="btn" onclick="execPicker()">Generate palette</button>
+            <span onclick="popupFormat(true)" id="btnSettings" class="fas fa-cog"></span>
+            <div id="format-message">
+                <p>Change format color</p>
+            </div>
+        </div>
         <small>"Spacebar" to generate new palettes | Control + mouse move to test Color</small>
+        <div id="popup-format">
+            <div id="alert-format">
+                <h4 onclick="popupFormat(false)" id="popup-format-exit">X</h4>
+                <h3>CHANGE FORMAT COLOR</h3>
+                <div>
+                    <label for="hex">Hex</label>
+                    <input type="radio" id="hex" name="format" value="hex" checked>
+                </div>
+                <hr>
+                <div>
+                    <label for="rgb">RGB</label>
+                    <input type="radio" id="rgb" name="format" value="rgb">
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
